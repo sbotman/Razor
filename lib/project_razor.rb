@@ -60,6 +60,11 @@ module ProjectRazor
   end
 end
 
+if File.exists?(File.join(ProjectRazor.config.ext_path, "ext.rb"))
+  $:.unshift(ProjectRazor.config.ext_path)
+  require 'ext'
+end
+
 class ::Object
   # Returns hash of classes that are children of
   # the namespace that called the method.

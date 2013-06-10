@@ -45,6 +45,7 @@ module ProjectRazor
       attr_accessor :mk_gemlist_uri
 
       attr_accessor :image_svc_path
+      attr_accessor :ext_path
 
       attr_accessor :register_timeout
       attr_accessor :force_mk_uuid
@@ -158,6 +159,7 @@ module ProjectRazor
           'mk_gemlist_uri'           => "http://localhost:2158/gem-mirror/gems/gem.list",
 
           'image_svc_path'           => $img_svc_path,
+          'ext_path'                 => File.join($razor_root, "..", "razor_ext"),
 
           'register_timeout'         => 120,
           'force_mk_uuid'            => "",
